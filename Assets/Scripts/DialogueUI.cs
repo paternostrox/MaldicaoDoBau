@@ -20,6 +20,11 @@ public class DialogueUI : MonoBehaviour
         Destroy(this);
     }
 
+    private void Start()
+    {
+        ChangeText("Dica: Aproxime-se de um NPC e aperte 'E'.",4f);
+    }
+
     public void ChangeText(string newText, float exibitionTime)
     {
         UIText.text = newText;
