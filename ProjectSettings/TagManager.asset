@@ -38,6 +38,18 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 2819000847
+    locked: 0
+  - name: Scenario
+    uniqueID: 54826835
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: NPCs
+    uniqueID: 4216726719
+    locked: 0
+  - name: Player
+    uniqueID: 99339357
     locked: 0
