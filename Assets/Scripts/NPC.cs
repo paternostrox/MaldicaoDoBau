@@ -2,14 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(AudioSource))]
 public class NPC : MonoBehaviour, IInteractable
 {
-    [TextArea]
-    public string dialogue;
-
-    public float exibitionTime = 5f;
+    public Dialogue[] dialogues;
 
     public bool needsButton = true;
+
+    AudioSource audioSource;
+
+    private void Awake()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
 
     public bool NeedsButton { 
         get { return needsButton; } 
@@ -18,6 +23,6 @@ public class NPC : MonoBehaviour, IInteractable
 
     public void Interact()
     {
-        DialogueUI.Main.ChangeText(dialogue, exibitionTime);
+        DialogueManager.Main.PlayDialogues(dialogues, audioSource);
     }
 }

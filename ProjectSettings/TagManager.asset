@@ -53,3 +53,6 @@ TagManager:
   - name: Player
     uniqueID: 99339357
     locked: 0
+  - name: ScenarioUp
+    uniqueID: 4130792775
+    locked: 0
