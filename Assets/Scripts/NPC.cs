@@ -11,6 +11,8 @@ public class NPC : MonoBehaviour, IInteractable
 
     AudioSource audioSource;
 
+    bool wasUsed = false;
+
     private void Awake()
     {
         audioSource = GetComponent<AudioSource>();
@@ -23,6 +25,10 @@ public class NPC : MonoBehaviour, IInteractable
 
     public void Interact()
     {
-        DialogueManager.Main.PlayDialogues(dialogues, audioSource);
+        if (!wasUsed)
+        {
+            DialogueManager.Main.PlayDialogues(dialogues, audioSource);
+            wasUsed = true;
+        }
     }
 }

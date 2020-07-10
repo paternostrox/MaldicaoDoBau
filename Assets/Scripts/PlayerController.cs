@@ -13,16 +13,38 @@ public class PlayerController : MonoBehaviour
 
     IInteractable currentInteractable;
 
+    public static PlayerController Main;
+
+    public bool isFrozen = false;
+
     private void Awake()
     {
-        animator = GetComponent<Animator>();
-        rb = GetComponent<Rigidbody2D>();
+        if (Main == null)
+        {
+            Main = this;
+            animator = GetComponent<Animator>();
+            rb = GetComponent<Rigidbody2D>();
+            return;
+        }
+        Destroy(this);
+    }
+
+    private void Start()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     private void Update()
     {
-        TryMove();
-        TryInteraction();
+        if (!isFrozen)
+        {
+            TryMove();
+            TryInteraction();
+            return;
+        }
+        rb.velocity = Vector2.zero;
+        animator.SetFloat("movement", 0f);
     }
 
     private void TryMove()

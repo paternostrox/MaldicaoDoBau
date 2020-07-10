@@ -94,7 +94,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71c1514a6bd24e1e882cebbe1904ce04, type: 3}
   m_Name: pixel emulator
   m_EditorClassIdentifier: 
-  hashCode: -2082866144
+  hashCode: 244277201
   material: {fileID: -1479318919121551194}
   materialHashCode: 454966699
   m_Version: 1.1.0

@@ -3440,6 +3440,7 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
+  - component: {fileID: 519420030}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -3455,6 +3456,103 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
+--- !u!82 &519420030
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 4493610399533007223, guid: a4d0d368fa67b8244bd3d79af0233b94,
+    type: 2}
+  m_audioClip: {fileID: 8300000, guid: b7a051c0d95c5c44781b0145b002fa68, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -4650,8 +4748,6 @@ Transform:
   - {fileID: 668261529}
   - {fileID: 1992040470}
   - {fileID: 1190457619}
-  - {fileID: 999178778}
-  - {fileID: 2028819098}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6165,7 +6261,7 @@ GameObject:
   - component: {fileID: 970674086}
   - component: {fileID: 970674089}
   m_Layer: 0
-  m_Name: Ghost3
+  m_Name: EspiritoCoach
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6186,7 +6282,7 @@ MonoBehaviour:
   dialogues:
   - dialogueText: "Esp\xEDrito Coach: Siga! Siga em frente! Voc\xEA est\xE1 perto
       do ba\xFA, com os tesouros dentro dele voc\xEA ser\xE1 invencivel!"
-    clip: {fileID: 8300000, guid: c33742e646855c14bad810b534a06a96, type: 3}
+    clip: {fileID: 8300000, guid: 4f0ec616ce1b5d045a9b93cbf0c9769d, type: 3}
   needsButton: 0
 --- !u!61 &970674087
 BoxCollider2D:
@@ -6237,7 +6333,8 @@ AudioSource:
   m_GameObject: {fileID: 970674085}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -227221036262188256, guid: a4d0d368fa67b8244bd3d79af0233b94,
+    type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -6416,8 +6513,10 @@ GameObject:
   - component: {fileID: 999178778}
   - component: {fileID: 999178779}
   - component: {fileID: 999178780}
+  - component: {fileID: 999178782}
+  - component: {fileID: 999178781}
   m_Layer: 0
-  m_Name: Chest
+  m_Name: "BauAmaldi\xE7oado"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6430,12 +6529,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 999178777}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.36, y: 22.81, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.17247057, y: 29.288715, z: -29.164633}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 706187430}
-  m_RootOrder: 4
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &999178779
 BoxCollider2D:
@@ -6489,6 +6588,119 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.8882606, y: 1.9873257}
   m_EdgeRadius: 0
+--- !u!82 &999178781
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 999178777}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: -227221036262188256, guid: a4d0d368fa67b8244bd3d79af0233b94,
+    type: 2}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &999178782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 999178777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db742b6412b6bf64d9696488b082423c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogues:
+  - dialogueText: "Joaquim, o Esp\xEDrito: queria saber qual \xE9 maldi\xE7\xE3o?
+      a\xED est\xE1!"
+    clip: {fileID: 8300000, guid: 6268105ecf71349419706bcf1a6ad7b4, type: 3}
 --- !u!1 &1011093114
 GameObject:
   m_ObjectHideFlags: 0
@@ -7474,7 +7686,7 @@ GameObject:
   - component: {fileID: 1144721930}
   - component: {fileID: 1144721933}
   m_Layer: 0
-  m_Name: Ghost1
+  m_Name: EspiritoCondenado
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7496,9 +7708,9 @@ MonoBehaviour:
   - dialogueText: "Esp\xEDrito Condenado: Vejo que voce \xE9 um grande guerreiro,
       mas quem entra aqui nunca foi digno de sair, ser\xE1 que voce vai conseguir?
       eu acho que n\xE3o!"
-    clip: {fileID: 8300000, guid: c33742e646855c14bad810b534a06a96, type: 3}
-  - dialogueText: 
-    clip: {fileID: 0}
+    clip: {fileID: 8300000, guid: f7bf06f19d120b54f8ecf0495d2a4977, type: 3}
+  - dialogueText: "\rHer\xF3i: HAHAHAH! Isso n\xE3o me assusta!"
+    clip: {fileID: 8300000, guid: b30ede11cdf87a8419738d6e9f6941fb, type: 3}
   needsButton: 0
 --- !u!61 &1144721931
 BoxCollider2D:
@@ -7549,7 +7761,8 @@ AudioSource:
   m_GameObject: {fileID: 1144721929}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -227221036262188256, guid: a4d0d368fa67b8244bd3d79af0233b94,
+    type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -8724,7 +8937,7 @@ GameObject:
   - component: {fileID: 1311967768}
   - component: {fileID: 1311967771}
   m_Layer: 0
-  m_Name: Ghost2 (1)
+  m_Name: EspiritoMalandrinho
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8743,9 +8956,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogues:
-  - dialogueText: "Esp\xEDrito Malandrinho: Ele tem coragem, todo mundo que entra
-      aqui tem"
-    clip: {fileID: 8300000, guid: c33742e646855c14bad810b534a06a96, type: 3}
+  - dialogueText: "Esp\xEDritos Malandrinhos: Ele tem coragem! hahahaha! Todo mundo
+      que entra aqui tem."
+    clip: {fileID: 8300000, guid: 7876d2928573b63449c42e3a00b9805c, type: 3}
   needsButton: 0
 --- !u!61 &1311967769
 BoxCollider2D:
@@ -8796,10 +9009,11 @@ AudioSource:
   m_GameObject: {fileID: 1311967767}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -227221036262188256, guid: a4d0d368fa67b8244bd3d79af0233b94,
+    type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.67
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -9223,7 +9437,7 @@ GameObject:
   - component: {fileID: 1353378814}
   - component: {fileID: 1353378815}
   m_Layer: 0
-  m_Name: WizardNPC
+  m_Name: MagoCauteloso
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9357,9 +9571,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogues:
-  - dialogueText: "Mago Medroso: Voc\xEA est\xE1 atr\xE1s do tesouro l\xE1 dentro?
-      Sem chance, ningu\xE9m nunca saiu de la!"
+  - dialogueText: "Mago Cauteloso: Voc\xEA est\xE1 atr\xE1s do tesouro que est\xE1
+      escondido l\xE1 dentro n\xE3o \xE9? Sem chance, voc\xEA n\xE3o vai conseguir,
+      ningu\xE9m nunca saiu de la!"
     clip: {fileID: 8300000, guid: c33742e646855c14bad810b534a06a96, type: 3}
+  - dialogueText: "Her\xF3i: Eu ja enfrentei muitos inimigos, com certeza vou entrar
+      naquela Dungeon e pegar o b\xE1u lend\xE1rio e ent\xE3o serei FABULOSO!"
+    clip: {fileID: 8300000, guid: 82cf2a559c2b6284da59988ca732ff2e, type: 3}
   needsButton: 1
 --- !u!82 &1353378815
 AudioSource:
@@ -9370,7 +9588,8 @@ AudioSource:
   m_GameObject: {fileID: 1353378808}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -227221036262188256, guid: a4d0d368fa67b8244bd3d79af0233b94,
+    type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -9471,7 +9690,7 @@ GameObject:
   - component: {fileID: 1362417906}
   - component: {fileID: 1362417907}
   m_Layer: 0
-  m_Name: DyingKnight
+  m_Name: Joaquim
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9554,9 +9773,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogues:
-  - dialogueText: "Joaquim o Guerreiro: Os esp\xEDritos invis\xEDveis estavam me
+  - dialogueText: "Joaquim, o Guerreiro: Os esp\xEDritos invis\xEDveis estavam me
       atacando! logo logo v\xE3o te encontrar, fuja! n\xE3o vale a pena contin\u2026"
-    clip: {fileID: 8300000, guid: c33742e646855c14bad810b534a06a96, type: 3}
+    clip: {fileID: 8300000, guid: 196762df2de5801478cc514b3e683f30, type: 3}
   needsButton: 1
 --- !u!58 &1362417906
 CircleCollider2D:
@@ -9583,7 +9802,8 @@ AudioSource:
   m_GameObject: {fileID: 1362417902}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -227221036262188256, guid: a4d0d368fa67b8244bd3d79af0233b94,
+    type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -10527,7 +10747,7 @@ GameObject:
   - component: {fileID: 1502921148}
   - component: {fileID: 1502921151}
   m_Layer: 0
-  m_Name: Ghost3 (1)
+  m_Name: EspiritoCoach
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10548,7 +10768,7 @@ MonoBehaviour:
   dialogues:
   - dialogueText: "Esp\xEDrito Coach: Siga! Siga em frente! Voc\xEA est\xE1 perto
       do ba\xFA, com os tesouros dentro dele voc\xEA ser\xE1 invencivel!"
-    clip: {fileID: 8300000, guid: c33742e646855c14bad810b534a06a96, type: 3}
+    clip: {fileID: 8300000, guid: 4f0ec616ce1b5d045a9b93cbf0c9769d, type: 3}
   needsButton: 0
 --- !u!61 &1502921149
 BoxCollider2D:
@@ -10599,7 +10819,8 @@ AudioSource:
   m_GameObject: {fileID: 1502921147}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -227221036262188256, guid: a4d0d368fa67b8244bd3d79af0233b94,
+    type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -11482,7 +11703,6 @@ GameObject:
   - component: {fileID: 1597098889}
   - component: {fileID: 1597098890}
   - component: {fileID: 1597098891}
-  - component: {fileID: 1597098892}
   m_Layer: 0
   m_Name: PlayerCharacter
   m_TagString: Untagged
@@ -11567,7 +11787,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1597098885}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.4137237, y: -3.11, z: 0}
+  m_LocalPosition: {x: -7.88, y: -3.58, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 519420032}
@@ -11587,6 +11807,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
+  isFrozen: 0
 --- !u!58 &1597098890
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -11624,102 +11845,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!82 &1597098892
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1597098885}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!1 &1603548126
 GameObject:
   m_ObjectHideFlags: 0
@@ -12055,6 +12180,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UIText: {fileID: 933557788}
   dialoguePanel: {fileID: 1960576749}
+  dialogueGroup: {fileID: -227221036262188256, guid: a4d0d368fa67b8244bd3d79af0233b94,
+    type: 2}
 --- !u!1 &1678788912
 GameObject:
   m_ObjectHideFlags: 0
@@ -14280,7 +14407,7 @@ GameObject:
   - component: {fileID: 1938650971}
   - component: {fileID: 1938650974}
   m_Layer: 0
-  m_Name: Ghost2
+  m_Name: EspiritoMalandrinho
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14299,9 +14426,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogues:
-  - dialogueText: "Esp\xEDrito Malandrinho: Ele tem coragem, todo mundo que entra
-      aqui tem"
-    clip: {fileID: 8300000, guid: c33742e646855c14bad810b534a06a96, type: 3}
+  - dialogueText: "Esp\xEDritos Malandrinhos: Ele tem coragem! hahahaha! Todo mundo
+      que entra aqui tem."
+    clip: {fileID: 8300000, guid: 7876d2928573b63449c42e3a00b9805c, type: 3}
   needsButton: 0
 --- !u!61 &1938650972
 BoxCollider2D:
@@ -14352,10 +14479,11 @@ AudioSource:
   m_GameObject: {fileID: 1938650970}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -227221036262188256, guid: a4d0d368fa67b8244bd3d79af0233b94,
+    type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.67
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -14909,7 +15037,7 @@ GameObject:
   - component: {fileID: 2000695331}
   - component: {fileID: 2000695334}
   m_Layer: 0
-  m_Name: PlayerThought
+  m_Name: PensamentoHeroi
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14929,8 +15057,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogues:
   - dialogueText: "Her\xF3i: Esse lugar n\xE3o tem maldi\xE7\xE3o nenhuma, essas
-      vozes a\xED n\xE3o fazem nada!"
-    clip: {fileID: 8300000, guid: c33742e646855c14bad810b534a06a96, type: 3}
+      vozes n\xE3o fazem nada!"
+    clip: {fileID: 8300000, guid: 30155a230f1f5304b8d1e431b17c3020, type: 3}
   needsButton: 0
 --- !u!61 &2000695332
 BoxCollider2D:
@@ -14981,7 +15109,8 @@ AudioSource:
   m_GameObject: {fileID: 2000695330}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -227221036262188256, guid: a4d0d368fa67b8244bd3d79af0233b94,
+    type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -15242,6 +15371,7 @@ GameObject:
   - component: {fileID: 2028819099}
   - component: {fileID: 2028819100}
   - component: {fileID: 2028819101}
+  - component: {fileID: 2028819102}
   m_Layer: 0
   m_Name: Door
   m_TagString: Untagged
@@ -15257,11 +15387,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2028819097}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.22, y: -3.12, z: -13.516031}
+  m_LocalPosition: {x: 0.032470703, y: 3.3587155, z: -42.680664}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 706187430}
-  m_RootOrder: 5
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &2028819099
 BoxCollider2D:
@@ -15329,6 +15459,103 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.0668037, y: 1.0968819}
   m_EdgeRadius: 0
+--- !u!82 &2028819102
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2028819097}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 2469000516536954087, guid: a4d0d368fa67b8244bd3d79af0233b94,
+    type: 2}
+  m_audioClip: {fileID: 8300000, guid: 8d45f722502c3a0438371246be7e921b, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &2030512896
 GameObject:
   m_ObjectHideFlags: 0

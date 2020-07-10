@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using TMPro;
+using UnityEngine.Audio;
 
 [System.Serializable]
 public struct Dialogue 
@@ -18,6 +19,10 @@ public class DialogueManager : MonoBehaviour
 
     public GameObject dialoguePanel;
 
+    public AudioMixerGroup dialogueGroup;
+
+    float dialoguePitch;
+
     private void Awake()
     {
         if(Main == null)
@@ -30,7 +35,9 @@ public class DialogueManager : MonoBehaviour
 
     private void Start()
     {
-        ShowTextMessage("Bem vindo herói, aproxime-se de um NPC e aperte 'E'.", 4f);
+
+        dialogueGroup.audioMixer.GetFloat("dialoguePitch", out dialoguePitch);
+        ShowTextMessage("Bem vindo herói, aproxime-se de um NPC e aperte 'E'.", 2.5f);
     }
 
     public void PlayDialogues(Dialogue[] dialogues, AudioSource audioSource)
@@ -40,15 +47,21 @@ public class DialogueManager : MonoBehaviour
 
     IEnumerator DialogueRun(Dialogue[] dialogues, AudioSource audioSource)
     {
+        PlayerController.Main.isFrozen = true;
         for(int i=0; i<dialogues.Length; i++)
         {
-            audioSource.PlayOneShot(dialogues[i].clip);
-            UIText.text = dialogues[i].dialogueText;
-            ShowPanel();
-            float exibitionTime = dialogues[i].clip.length + .5f;
-            yield return new WaitForSeconds(exibitionTime);
+            if (dialogues[i].clip != null)
+            {
+                audioSource.PlayOneShot(dialogues[i].clip);
+                UIText.text = dialogues[i].dialogueText;
+                ShowPanel();
+                float exibitionTime = dialogues[i].clip.length / Mathf.Abs(dialoguePitch) + .5f;
+                print(exibitionTime);
+                yield return new WaitForSeconds(exibitionTime);
+            }
         }
         HidePanel();
+        PlayerController.Main.isFrozen = false;
     }
 
     public void ShowTextMessage(string newText, float exibitionTime)
